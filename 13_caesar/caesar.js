@@ -1,5 +1,5 @@
-const caesar = function(str,shift) {
-    return str.split("").map(s=>caesar(s,shift))
+const caesar = function x(str,shift) {
+    return str.split("").map(s=>x(s,shift))
     .join("")
 
 };
@@ -7,7 +7,7 @@ function mod(x,y)
 {
     return ((x % y) + y) % y;
 }
-function caesar(str,shift)
+function x(str,shift)
 {
     let current_char;
     let starter=0;
