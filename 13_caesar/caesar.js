@@ -16,7 +16,7 @@ function x(str,shift)
     if ((starter>=65 && starter <= 90) || (starter >=97) && (starter <= 122))
     {
     starter=starter < 97 ? 65: 97;
-    return String.fromCharCode(mod(current_char+shift-starter,starter)+starter);
+    return String.fromCharCode(mod(current_char+shift-starter,26)+starter);
     }
     return str;
 }
