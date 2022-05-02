@@ -1,4 +1,4 @@
-const caesar = function x(str,shift) {
+const caesar = function(str,shift) {
     return str.split("").map(s=>x(s,shift))
     .join("")
 
@@ -13,8 +13,12 @@ function x(str,shift)
     let starter=0;
     starter=str.charCodeAt();
     current_char=starter;
-    starter=starter<97? 65: 97;
-    return String.fromCharCode((mod(current_char+shift-starter),starter)+starter);
+    if ((starter>=65 && starter <= 90) || (starter >=97) && (starter <= 122))
+    {
+    starter=starter < 97 ? 65: 97;
+    return String.fromCharCode(mod(current_char+shift-starter,starter)+starter);
+    }
+    return str;
 }
 // Do not edit below this line
 module.exports = caesar;
